@@ -1100,266 +1100,366 @@ public class Exercise {
                 </section>
             </section>
             <section id="dataLayer">
-                <h2>Capa de Datos</h2>
-                <ul>
-                    <li>Cache
-                        <ul>
-                            <li>Serializer</li>
-                        </ul>
-                    </li>
-                    <li>Entity
-                        <ul>
-                            <li>Mapper</li>
-                        </ul>
-                    </li>
-                    <li>Repository
-                        <ul>
-                            <li>DataSource</li>
-                        </ul>
-                    </li>
-                </ul>
-            </section>
-            <section>
-                <h2>Slides</h2>
-                <p>
-                    Not a coder? Not a problem. There's a fully-featured visual editor for authoring these, try it out at <a href="http://slides.com" target="_blank">http://slides.com</a>.
-                </p>
-            </section>
-            <section>
-                <h2>Point of View</h2>
-                <p>
-                    Press <strong>ESC</strong> to enter the slide overview.
-                </p>
-                <p>
-                    Hold down alt and click on any element to zoom in on it using <a href="http://lab.hakim.se/zoom-js">zoom.js</a>. Alt + click anywhere to zoom back out.
-                </p>
-            </section>
-            <section>
-                <h2>Touch Optimized</h2>
-                <p>
-                    Presentations look great on touch devices, like mobile phones and tablets. Simply swipe through your slides.
-                </p>
-            </section>
-            <section data-markdown>
-                <script type="text/template">
-                    ## Markdown support Write content using inline or external Markdown. Instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown). ```
-                    <section data-markdown>
-                        ## Markdown support Write content using inline or external Markdown. Instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown).
-                    </section>
-                    ```
-                </script>
-            </section>
-            <section id="transitions">
-                <h2>Transition Styles</h2>
-                <p>
-                    You can select from different transitions, like:
-                    <br>
-                    <a href="?transition=none#/transitions">None</a> -
-                    <a href="?transition=fade#/transitions">Fade</a> -
-                    <a href="?transition=slide#/transitions">Slide</a> -
-                    <a href="?transition=convex#/transitions">Convex</a> -
-                    <a href="?transition=concave#/transitions">Concave</a> -
-                    <a href="?transition=zoom#/transitions">Zoom</a>
-                </p>
-            </section>
-            <section id="themes">
-                <h2>Themes</h2>
-                <p>
-                    reveal.js comes with a few themes built in:
-                    <br>
-                    <!-- Hacks to swap themes after the page has loaded. Not flexible and only intended for the reveal.js demo deck. -->
-                    <a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/black.css'); return false;">Black (default)</a> -
-                    <a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/white.css'); return false;">White</a> -
-                    <a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/league.css'); return false;">League</a> -
-                    <a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/sky.css'); return false;">Sky</a> -
-                    <a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/beige.css'); return false;">Beige</a> -
-                    <a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/simple.css'); return false;">Simple</a>
-                    <br>
-                    <a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/serif.css'); return false;">Serif</a> -
-                    <a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/blood.css'); return false;">Blood</a> -
-                    <a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/night.css'); return false;">Night</a> -
-                    <a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/moon.css'); return false;">Moon</a> -
-                    <a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/solarized.css'); return false;">Solarized</a>
-                </p>
-            </section>
-            <section>
-                <section data-background="#dddddd">
-                    <h2>Slide Backgrounds</h2>
-                    <p>
-                        Set <code>data-background="#dddddd"</code> on a slide to change the background color. All CSS color formats are supported.
-                    </p>
-                    <a href="#" class="navigate-down">
-                        <img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-                    </a>
+                <section>
+                    <h2>Capa de Datos</h2>
+                    <ul>
+                        <li>Cache
+                            <ul>
+                                <li>Serializer</li>
+                            </ul>
+                        </li>
+                        <li>Entity
+                            <ul>
+                                <li>Mapper</li>
+                            </ul>
+                        </li>
+                        <li>Repository
+                            <ul>
+                                <li>DataSource</li>
+                            </ul>
+                        </li>
+                    </ul>
                 </section>
-                <section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png">
-                    <h2>Image Backgrounds</h2>
-                    <pre><code class="hljs">&lt;section data-background="image.png"&gt;</code></pre>
-                </section>
-                <section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png" data-background-repeat="repeat" data-background-size="100px">
-                    <h2>Tiled Backgrounds</h2>
-                    <pre><code class="hljs" style="word-wrap: break-word;">&lt;section data-background="image.png" data-background-repeat="repeat" data-background-size="100px"&gt;</code></pre>
-                </section>
-                <section data-background-video="https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.mp4,https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.webm" data-background-color="#000000">
-                    <div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
-                        <h2>Video Backgrounds</h2>
-                        <pre><code class="hljs" style="word-wrap: break-word;">&lt;section data-background-video="video.mp4,video.webm"&gt;</code></pre>
-                    </div>
-                </section>
-                <section data-background="http://i.giphy.com/90F8aUepslB84.gif">
-                    <h2>... and GIFs!</h2>
-                </section>
-            </section>
-            <section data-transition="slide" data-background="#4d7e65" data-background-transition="zoom">
-                <h2>Background Transitions</h2>
-                <p>
-                    Different background transitions are available via the backgroundTransition option. This one's called "zoom".
-                </p>
-                <pre><code class="hljs">Reveal.configure({ backgroundTransition: 'zoom' })</code></pre>
-            </section>
-            <section data-transition="slide" data-background="#b5533c" data-background-transition="zoom">
-                <h2>Background Transitions</h2>
-                <p>
-                    You can override background transitions per-slide.
-                </p>
-                <pre><code class="hljs" style="word-wrap: break-word;">&lt;section data-background-transition="zoom"&gt;</code></pre>
-            </section>
-            <section>
-                <h2>Pretty Code</h2>
-                <pre><code class="hljs" data-trim contenteditable>
-function linkify( selector ) {
-  if( supports3DTransforms ) {
+                <section>
+                    <h2>Cache</h2>
+                    <p>En esta area se maneja el cache que tiene la aplicación, este puede ser un archivo, una base de dato relacional o un key/value store</p>
+                    <pre><code class="java" data-trim>
+public interface ExerciseCache {
+    Observable&lt;Exercise&gt; get(final String ExerciseID);
 
-    var nodes = document.querySelectorAll( selector );
+    Observable&lt;List&lt;Exercise&gt;&gt; getAll();
 
-    for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
-      var node = nodes[i];
+    Observable&lt;Exercise&gt; update(Exercise exercise);
 
-      if( !node.className ) {
-        node.className += ' roll';
-      }
-    }
-  }
+    Observable&lt;Exercise&gt; create(Exercise exercise);
+
+    Observable&lt;Exercise&gt; delete(final String ExerciseID);
 }
                     </code></pre>
-                <p>Code syntax highlighting courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
-            </section>
-            <section>
-                <h2>Marvelous List</h2>
-                <ul>
-                    <li>No order here</li>
-                    <li>Or here</li>
-                    <li>Or here</li>
-                    <li>Or here</li>
-                </ul>
-            </section>
-            <section>
-                <h2>Fantastic Ordered List</h2>
-                <ol>
-                    <li>One is smaller than...</li>
-                    <li>Two is smaller than...</li>
-                    <li>Three!</li>
-                </ol>
-            </section>
-            <section>
-                <h2>Tabular Tables</h2>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Item</th>
-                            <th>Value</th>
-                            <th>Quantity</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Apples</td>
-                            <td>$1</td>
-                            <td>7</td>
-                        </tr>
-                        <tr>
-                            <td>Lemonade</td>
-                            <td>$2</td>
-                            <td>18</td>
-                        </tr>
-                        <tr>
-                            <td>Bread</td>
-                            <td>$3</td>
-                            <td>2</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </section>
-            <section>
-                <h2>Clever Quotes</h2>
-                <p>
-                    These guys come in two forms, inline:
-                    <q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-                        &ldquo;The nice thing about standards is that there are so many to choose from&rdquo;</q> and block:
-                </p>
-                <blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-                    &ldquo;For years there has been a theory that millions of monkeys typing at random on millions of typewriters would reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.&rdquo;
-                </blockquote>
-            </section>
-            <section>
-                <h2>Intergalactic Interconnections</h2>
-                <p>
-                    You can link between slides internally,
-                    <a href="#/2/3">like this</a>.
-                </p>
-            </section>
-            <section>
-                <h2>Speaker View</h2>
-                <p>There's a <a href="https://github.com/hakimel/reveal.js#speaker-notes">speaker view</a>. It includes a timer, preview of the upcoming slide as well as your speaker notes.</p>
-                <p>Press the <em>S</em> key to try it out.</p>
-                <aside class="notes">
-                    Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
-                </aside>
-            </section>
-            <section>
-                <h2>Export to PDF</h2>
-                <p>Presentations can be <a href="https://github.com/hakimel/reveal.js#pdf-export">exported to PDF</a>, here's an example:</p>
-                <iframe data-src="https://www.slideshare.net/slideshow/embed_code/42840540" width="445" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:3px solid #666; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
-            </section>
-            <section>
-                <h2>Global State</h2>
-                <p>
-                    Set <code>data-state="something"</code> on a slide and <code>"something"</code> will be added as a class to the document element when the slide is open. This lets you apply broader style changes, like switching the page background.
-                </p>
-            </section>
-            <section data-state="customevent">
-                <h2>State Events</h2>
-                <p>
-                    Additionally custom events can be triggered on a per slide basis by binding to the <code>data-state</code> name.
-                </p>
-                <pre><code class="javascript" data-trim contenteditable style="font-size: 18px;">
-Reveal.addEventListener( 'customevent', function() {
-    console.log( '"customevent" has fired' );
-} );
+                </section>
+                <section>
+                    <h2>Serializer</h2>
+                    <p>Transforma un objeto a una cadena serializable como JSON o XML</p>
+                    <pre><code class="java" data-trim>
+@Singleton
+public class ExerciseJsonSerializer {
+    private final Gson gson = new Gson();
+
+    @Inject
+    public ExerciseJsonSerializer() {}
+    
+    public String serialize(ExerciseEntity exerciseEntity) {
+        return gson.toJson(exerciseEntity, ExerciseEntity.class);
+    }
+
+    public ExerciseEntity deserialize(String jsonString) {
+        return gson.fromJson(jsonString, ExerciseEntity.class);
+    }
+}
                     </code></pre>
+                </section>
+                <section>
+                    <h2>Entity</h2>
+                    <p>Son objetos análogos a las entidades de la capa de aplicación</p>
+                    <pre><code class="java" data-trim>
+public class ExerciseEntity extends RealmObject{
+    @SerializedName("ExerciseID")
+    private String ExerciseID;
+
+    @SerializedName("name")
+    private String name;
+
+    @SerializedName("measure")
+    private String measure;
+
+    @SerializedName("tag")
+    private String tag;
+
+    @SerializedName("amount")
+    private Integer amount;
+
+    @SerializedName("unit")
+    private String unit;
+
+    public ExerciseEntity() {}
+
+    public String getExerciseID() {
+        return ExerciseID;
+    }
+
+    public void setExerciseID(String exerciseID) {
+        ExerciseID = exerciseID;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getMeasure() {
+        return measure;
+    }
+
+    public void setMeasure(String measure) {
+        this.measure = measure;
+    }
+
+    public String getTag() {
+        return tag;
+    }
+
+    public void setTag(String tag) {
+        this.tag = tag;
+    }
+
+    public Integer getAmount() {
+        return amount;
+    }
+
+    public void setAmount(Integer amount) {
+        this.amount = amount;
+    }
+
+    public String getUnit() {
+        return unit;
+    }
+
+    public void setUnit(String unit) {
+        this.unit = unit;
+    }
+
+    @Override
+    public String toString() {
+        return "***** Exercise Entity Details *****\n" +
+                "ExerciseID=" + this.getExerciseID() + "\n" +
+                "name=" + this.getName() + "\n" +
+                "measure=" + this.getMeasure() + "\n" +
+                "tag=" + this.getTag() + "\n" +
+                "amount=" + this.getAmount() + "\n" +
+                "unit=" + this.getUnit() + "\n" +
+                "*******************************";
+    }
+}
+                    </code></pre>
+                </section>
+                <section>
+                    <h2>Mapper</h2>
+                    <p>Transforma un objeto de la capa de aplicación a la capa de datos y viceversa</p>
+                    <pre><code class="java" data-trim>
+@Singleton
+public class ExerciseEntityDataMapper {
+    @Inject
+    ExerciseEntityDataMapper() {}
+
+    /**
+     * Transform a {@link ExerciseEntity} into an {@link Exercise}.
+     *
+     * @param exerciseEntity Object to be transformed.
+     * @return {@link Exercise} if valid {@link ExerciseEntity} otherwise null.
+     */
+    public Exercise transform(ExerciseEntity exerciseEntity) {
+        Exercise exercise = null;
+        if (exerciseEntity != null) {
+            exercise = new Exercise();
+            exercise.setExerciseID(exerciseEntity.getExerciseID());
+            exercise.setName(exerciseEntity.getName());
+            exercise.setMeasure(exerciseEntity.getMeasure());
+            exercise.setTag(exerciseEntity.getTag());
+            exercise.setAmount(exerciseEntity.getAmount());
+            exercise.setUnit(exerciseEntity.getUnit());
+        }
+        return exercise;
+    }
+
+    /**
+     * Transform a List of {@link ExerciseEntity} into a Collection of {@link Exercise}.
+     *
+     * @param exerciseEntityCollection Object Collection to be transformed.
+     * @return {@link Exercise} if valid {@link ExerciseEntity} otherwise null.
+     */
+    public List&lt;Exercise&gt; transform(Collection&lt;ExerciseEntity&gt; exerciseEntityCollection) {
+        List&lt;Exercise&gt; exerciseList = new ArrayList&lt;&gt;();
+        Exercise exercise;
+        for (ExerciseEntity exerciseEntity : exerciseEntityCollection) {
+            exercise = transform(exerciseEntity);
+            if (exercise != null) {
+                exerciseList.add(exercise);
+            }
+        }
+        return exerciseList;
+    }
+
+    /**
+     * Transform a {@link ExerciseEntity} into an {@link Exercise}.
+     *
+     * @param exercise Object to be transformed.
+     * @return {@link Exercise} if valid {@link ExerciseEntity} otherwise null.
+     */
+    public ExerciseEntity transform(Exercise exercise) {
+        ExerciseEntity exerciseEntity = null;
+        if (exercise != null) {
+            exerciseEntity = new ExerciseEntity();
+            exerciseEntity.setExerciseID(exercise.getExerciseID());
+            exerciseEntity.setName(exercise.getName());
+            exerciseEntity.setMeasure(exercise.getMeasure());
+            exerciseEntity.setTag(exercise.getTag());
+            exerciseEntity.setAmount(exercise.getAmount());
+            exerciseEntity.setUnit(exercise.getUnit());
+        }
+        return exerciseEntity;
+    }
+}
+                    </code></pre>
+                </section>
+                <section>
+                    <h2>Repository</h2>
+                    <p>Implementa las interfaces <b><i>repository</i></b> que se encuentran en la capa de aplicación </p>
+                    <pre><code class="java" data-trim>
+public class ExerciseDataRepository implements ExerciseRepository{
+    private final ExerciseDataStoreFactory exerciseDataStoreFactory;
+
+    @Inject
+    ExerciseDataRepository(ExerciseDataStoreFactory dataStoreFactory) {
+        this.exerciseDataStoreFactory = dataStoreFactory;
+    }
+
+    @Override
+    public Observable&lt;List&lt;Exercise&gt;&gt; getExercises() {
+        return this.exerciseDataStoreFactory.create().exerciseList();
+    }
+
+    @Override
+    public Observable&lt;Exercise&gt; getExercise(String ExerciseID) {
+        return exerciseDataStoreFactory.create().exerciseDetails(ExerciseID);
+    }
+
+    @Override
+    public Observable&lt;Exercise&gt; addExercise(Exercise exercise) {
+        return exerciseDataStoreFactory.create().exerciseCreate(exercise);
+    }
+
+    @Override
+    public Observable&lt;Exercise&gt; updateExercise(Exercise exercise) {
+        return exerciseDataStoreFactory.create().exerciseUpdate(exercise);
+    }
+
+    @Override
+    public Observable&lt;Exercise&gt; deleteExercise(String ExerciseID) {
+        return exerciseDataStoreFactory.create().exerciseDelete(ExerciseID);
+    }
+}
+                    </code></pre>
+                </section>
+                <section>
+                    <h2>DataSource</h2>
+                    <p>Maneja el origen y destino de los datos, estos pueden ser un servidor remoto, una máquina dentro de la red, información del mismo dispositivo o una base de datos local</p>
+                    <pre><code class="java" data-trim>
+public interface ExerciseDataStore {
+    Observable&lt;List&lt;Exercise&gt;&gt; exerciseList();
+
+    Observable&lt;Exercise&gt; exerciseDetails(final String ExerciseID);
+
+    Observable&lt;Exercise&gt; exerciseCreate(final Exercise exercise);
+
+    Observable&lt;Exercise&gt; exerciseUpdate(final Exercise exercise);
+
+    Observable&lt;Exercise&gt; exerciseDelete(final String ExerciseID);
+}        
+                    </code></pre>
+                </section>
             </section>
-            <section>
-                <h2>Take a Moment</h2>
+            <section id="application">
+                <h2>Luft</h2>
+                <img src="img/app.png" style="background: none !important; border: 0px !important;     box-shadow: 0 0 0px rgba(0, 0, 0, 0.15);">
+            </section>
+            <section id="player">
+                <section>
+                    <h2>Jugadores</h2>
+                    <img src="img/player_screen_visualization.png" style="width: 30%; height: auto;">
+                </section>
+                <section>
+                    <h2>Creación</h2>
+                    <img src="img/player_create_fields_screen.png" style="width: 30%; height: auto;">
+                </section>
+            </section>
+            <section id="exercise">
+                <section>
+                    <h2>Ejercicio</h2>
+                    <img src="img/exercise_screen_visualization.png" style="width: 30%; height: auto;">
+                </section>
+                <section>
+                    <h2>Creación</h2>
+                    <img src="img/exercise_create_fields_screen.png" style="width: 30%; height: auto;">
+                </section>
+                <section>
+                    <h2>Escala de Evaluación</h2>
+                    <img src="img/exercise_scale_fields_screen.png" style="width: 30%; height: auto;">
+                </section>
+            </section>
+            <section id="training">
+                <section>
+                    <h2>Inicio</h2>
+                    <img src="img/home_screen.png" style="width: 30%; height: auto;">
+                </section>
+                <section>
+                    <h2>Selección de Jugadores</h2>
+                    <img src="img/training_player_selection.png" style="width: 30%; height: auto;">
+                </section>
+                <section>
+                    <h2>Selección de Ejercicios</h2>
+                    <img src="img/training_exercise_selection.png" style="width: 30%; height: auto;">
+                </section>
+                <section>
+                    <h2>Repeticiones</h2>
+                    <img src="img/training_exercise_repetition.png" style="width: 30%; height: auto;">
+                </section>
+                <section>
+                    <h2>Entrenamiento</h2>
+                    <img src="img/training_main.png" style="width: 30%; height: auto;">
+                </section>
+                <section>
+                    <h2>Monto</h2>
+                    <img src="img/training_amount.png" style="width: 30%; height: auto;">
+                </section>
+                <section>
+                    <h2>Cronómetro</h2>
+                    <img src="img/training_chronometer.png" style="width: 30%; height: auto;">
+                </section>
+                <section>
+                    <h2>Temporizador</h2>
+                    <img src="img/training_timer_start.png" style="width: 30%; height: auto;">
+                </section>
+                <section>
+                    <h2>Temporizador</h2>
+                    <img src="img/training_timer_data.png" style="width: 30%; height: auto;">
+                </section>
+            </section>
+            <section id="playerPerformance">
+                <section>
+                    <h2>Rendimiento del Jugador</h2>
+                    <img src="img/player_performance.png" style="width: 30%; height: auto;">
+                </section>
+            </section>
+            <section id="history">
+                <section>
+                    <h2>Historial</h2>
+                    <img src="img/history_screen.png" style="width: 30%; height: auto;">
+                </section>
+                <section>
+                    <h2>Detalles del entrenamiento</h2>
+                    <img src="img/history_detail.png" style="width: 30%; height: auto;">
+                </section>
+            </section>
+            <section style="text-align: right;">
                 <p>
-                    Press B or . on your keyboard to pause the presentation. This is helpful when you're on stage and want to take distracting slides off the screen.
+                    <q cite="https://www.goodreads.com/work/quotes/3779106-clean-code-a-handbook-of-agile-software-craftsmanship-robert-c-martin">
+                        &ldquo;It is not enough for code to work&rdquo;
+                    </q>
                 </p>
-            </section>
-            <section>
-                <h2>Much more</h2>
-                <ul>
-                    <li>Right-to-left support</li>
-                    <li><a href="https://github.com/hakimel/reveal.js#api">Extensive JavaScript API</a></li>
-                    <li><a href="https://github.com/hakimel/reveal.js#auto-sliding">Auto-progression</a></li>
-                    <li><a href="https://github.com/hakimel/reveal.js#parallax-background">Parallax backgrounds</a></li>
-                    <li><a href="https://github.com/hakimel/reveal.js#keyboard-bindings">Custom keyboard bindings</a></li>
-                </ul>
-            </section>
-            <section style="text-align: left;">
-                <h1>THE END</h1>
-                <p>
-                    - <a href="http://slides.com">Try the online editor</a>
-                    <br> - <a href="https://github.com/hakimel/reveal.js">Source code &amp; documentation</a>
-                </p>
+                <h5>- Robert C. Martin</h5>
             </section>
         </div>
     </div>
