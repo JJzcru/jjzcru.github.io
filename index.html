@@ -934,34 +934,187 @@ public class PlayerPerfomanceRecordListAdapter extends RecyclerView.Adapter&lt;P
         }
     }
 }
-
                     </code></pre>
                 </section>
             </section>
             <section id="domainLayer">
-                <h2>Capa de Dominio</h2>
-                <ul>
-                    <li class="fragment fade-up">Interactor</li>
-                    <li class="fragment fade-up">Repository</li>
-                    <li class="fragment fade-up">Entities</li>
-                </ul>
+                <section>
+                    <h2>Capa de Dominio</h2>
+                    <ul>
+                        <li>Interactor</li>
+                        <li>Repository</li>
+                        <li>Entities</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Interactor</h2>
+                    <p>Aqui se encuentran todos los casos de uso que depende nuestra aplicación</p>
+                    <pre><code class="java" data-trim>
+public class GetExerciseList extends UseCase{
+    private static final String TAG = "L-GetExerciseList";
+
+    private final ExerciseRepository exerciseRepository;
+
+    @Inject
+    GetExerciseList(ExerciseRepository exerciseRepository, ThreadExecutor threadExecutor, PostExecutionThread postExecutionThread) {
+        super(threadExecutor, postExecutionThread);
+        this.exerciseRepository = exerciseRepository;
+    }
+
+    @Override
+    public Observable buildUseCaseObservable() {
+        return this.exerciseRepository.getExercises();
+    }
+}
+                    </code></pre>
+                </section>
+                <section>
+                    <h2>UseCase</h2>
+                    <p>Todos los interactors implementan la siguiente clase abstracta que maneja el <b><i>Execute Pattern</i></b></p>
+                    <pre><code class="java" data-trim>
+public abstract class UseCase {
+    private final ThreadExecutor threadExecutor;
+    private final PostExecutionThread postExecutionThread;
+
+    private Subscription subscription = Subscriptions.empty();
+
+    protected UseCase(ThreadExecutor threadExecutor, PostExecutionThread postExecutionThread) {
+        this.threadExecutor = threadExecutor;
+        this.postExecutionThread = postExecutionThread;
+    }
+
+    protected abstract Observable buildUseCaseObservable();
+
+    public void execute(Subscriber useCaseSubscriber) {
+        this.subscription = this.buildUseCaseObservable()
+                .subscribeOn(Schedulers.from(threadExecutor))
+                .observeOn(postExecutionThread.getScheduler())
+                .subscribe(useCaseSubscriber);
+    }
+
+    public void unsubscribe() {
+        if (!subscription.isUnsubscribed()) {
+            subscription.unsubscribe();
+        }
+    }
+}
+                    </code></pre>
+                </section>
+                <section>
+                    <h2>Repository</h2>
+                    <p>En este paquete estan interfaces que declaran las funcionalidades que deben implementar los repositorios de la capa de datos</p>
+                    <pre><code class="java" data-trim>
+public interface ExerciseRepository {
+    Observable&lt;List&lt;Exercise&gt;&gt; getExercises();
+
+    Observable&lt;Exercise&gt; getExercise(final String ExerciseID);
+
+    Observable&lt;Exercise&gt; addExercise(final Exercise exercise);
+
+    Observable&lt;Exercise&gt; updateExercise(Exercise exercise);
+
+    Observable&lt;Exercise&gt; deleteExercise(final String ExerciseID);
+}
+                    </code></pre>
+                </section>
+                <section>
+                    <h2>Entities</h2>
+                    <p>Estos son los objetos de negocio de la aplicación</p>
+                    <pre><code class="java" data-trim>
+public class Exercise {
+    private String ExerciseID;
+    private String name;
+    private String measure;
+    private String tag;
+    private Integer amount;
+    private String unit;
+
+    public Exercise() {
+    }
+
+    public Exercise(String exerciseID) {
+        this.ExerciseID = exerciseID;
+    }
+
+    public String getExerciseID() {
+        return ExerciseID;
+    }
+
+    public void setExerciseID(String exerciseID) {
+        ExerciseID = exerciseID;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getMeasure() {
+        return measure;
+    }
+
+    public void setMeasure(String measure) {
+        this.measure = measure;
+    }
+
+    public String getTag() {
+        return tag;
+    }
+
+    public void setTag(String tag) {
+        this.tag = tag;
+    }
+
+    public Integer getAmount() {
+        return amount;
+    }
+
+    public void setAmount(Integer amount) {
+        this.amount = amount;
+    }
+
+    public String getUnit() {
+        return unit;
+    }
+
+    public void setUnit(String unit) {
+        this.unit = unit;
+    }
+
+    @Override
+    public String toString() {
+        return "***** Exercise Model Details *****\n" +
+                "ExerciseID=" + this.getExerciseID() + "\n" +
+                "name=" + this.getName() + "\n" +
+                "measure=" + this.getMeasure() + "\n" +
+                "tag=" + this.getTag() + "\n" +
+                "amount=" + this.getAmount() + "\n" +
+                "unit=" + this.getUnit() + "\n" +
+                "*******************************";
+    }
+}
+                    </code></pre>
+                </section>
             </section>
             <section id="dataLayer">
                 <h2>Capa de Datos</h2>
                 <ul>
-                    <li class="fragment fade-up">Cache
+                    <li>Cache
                         <ul>
-                            <li class="fragment fade-up">Serializer</li>
+                            <li>Serializer</li>
                         </ul>
                     </li>
-                    <li class="fragment fade-up">Entity
+                    <li>Entity
                         <ul>
-                            <li class="fragment fade-up">Mapper</li>
+                            <li>Mapper</li>
                         </ul>
                     </li>
-                    <li class="fragment fade-up">Repository
+                    <li>Repository
                         <ul>
-                            <li class="fragment fade-up">DataSource</li>
+                            <li>DataSource</li>
                         </ul>
                     </li>
                 </ul>
